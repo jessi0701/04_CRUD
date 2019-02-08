@@ -1,0 +1,17 @@
+{% extends "movie/base.html" %}
+{% block bb %}
+<h1>{{movie.title}}</h1><br>
+<h3>{{movie.title_en}}</h3><br>
+    누적관객수: <p>{{movie.audience}}</p><br>
+    개봉일: <p>{{movie.open_date}}</p><br>
+    장르: <p>{{movie.genre}}</p><br>
+    관람등급: <p>{{movie.watch_grade}}</p><br>
+    평점: <p>{{movie.score}}</p><br>
+    포스트 이미지 URL: <p>{{movie.poster_url}}</p><br>
+    영화소개: <p>{{movie.description}}</p><br>
+    <a href="/movies">목록</a>
+    <a href="/movies/{{movie.id}}/edit">수정</a>
+    <a href="/movies/{{movie.id}}/delete">삭제</a>
+
+
+{% endblock %}
